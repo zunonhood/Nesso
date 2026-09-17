@@ -1,4 +1,4 @@
-﻿const APP={contractAddress:""};
+﻿const APP={contractAddress:"0xfEfA20047865B42e877CB8d45c73508AB8791385"};
 const RH={chainId:"0x1237",chainName:"Robinhood Chain",nativeCurrency:{name:"Ether",symbol:"ETH",decimals:18},rpcUrls:["https://rpc.mainnet.chain.robinhood.com"],blockExplorerUrls:["https://robinhoodchain.blockscout.com"]};
 const $=selector=>document.querySelector(selector),$$=selector=>document.querySelectorAll(selector);
 const walletButton=$("#walletButton"),walletLabel=$("#walletLabel"),walletMenu=$("#walletMenu"),walletMenuAddress=$("#walletMenuAddress"),walletNetworkLabel=$("#walletNetworkLabel"),modal=$("#rescueModal"),repoInput=$("#repoInput"),toast=$("#toast");
@@ -137,6 +137,7 @@ const revealItems=$$(".archive-head,.index-board,.case-grid,.economics-head,.mon
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("revealed");observer.unobserve(entry.target)}}),{threshold:.1});revealItems.forEach(item=>observer.observe(item));
 const artifact=$(".artifact-stage");artifact?.addEventListener("pointermove",event=>{const box=artifact.getBoundingClientRect(),x=(event.clientX-box.left)/box.width-.5,y=(event.clientY-box.top)/box.height-.5;artifact.style.setProperty("--mx",`${x*5}px`);artifact.style.setProperty("--my",`${y*4}px`)});artifact?.addEventListener("pointerleave",()=>{artifact.style.setProperty("--mx","0px");artifact.style.setProperty("--my","0px")});
 loadRescues();
+
 
 
 
