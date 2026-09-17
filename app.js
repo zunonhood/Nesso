@@ -1,4 +1,4 @@
-﻿const APP={contractAddress:"0xfEfA20047865B42e877CB8d45c73508AB8791385"};
+﻿const APP={contractAddress:"TBA"};
 const RH={chainId:"0x1237",chainName:"Robinhood Chain",nativeCurrency:{name:"Ether",symbol:"ETH",decimals:18},rpcUrls:["https://rpc.mainnet.chain.robinhood.com"],blockExplorerUrls:["https://robinhoodchain.blockscout.com"]};
 const $=selector=>document.querySelector(selector),$$=selector=>document.querySelectorAll(selector);
 const walletButton=$("#walletButton"),walletLabel=$("#walletLabel"),walletMenu=$("#walletMenu"),walletMenuAddress=$("#walletMenuAddress"),walletNetworkLabel=$("#walletNetworkLabel"),modal=$("#rescueModal"),repoInput=$("#repoInput"),toast=$("#toast");
@@ -71,7 +71,8 @@ async function connect(){
  finally{walletButton.disabled=false;walletButton.classList.remove("loading");if(!currentAccount)walletLabel.textContent="Connect wallet"}
 }
 function initContractAddress(){
- const address=APP.contractAddress.trim(),label=$("#contractAddress"),button=$("#copyCaButton");if(!address)return;
+ const address=APP.contractAddress.trim(),label=$("#contractAddress"),button=$("#copyCaButton");
+ if(!/^0x[a-fA-F0-9]{40}$/.test(address)){label.textContent="TBA";button.disabled=true;button.textContent="CA PENDING";return}
  label.textContent=address;button.disabled=false;button.textContent="COPY CA";$("#contractArea").classList.add("live");
  button.addEventListener("click",async()=>{await navigator.clipboard.writeText(address);button.textContent="COPIED";notify("Contract address copied");setTimeout(()=>button.textContent="COPY CA",1800)});
 }function showStage(name){form.hidden=name!=="form";progress.hidden=name!=="progress";result.hidden=name!=="result"}

@@ -39,5 +39,5 @@ The public build uses live GitHub public API data and browser localStorage, so r
 Custom domain: https://nesso.fun
 
 
-Official Robinhood Chain CA: 0xfEfA20047865B42e877CB8d45c73508AB8791385
+Official Robinhood Chain CA: TBA
 
