@@ -1,0 +1,153 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Nesso gives abandoned software the means to survive."/>
+  <title>Nesso — Autonomous software rescue</title>
+  <link rel="icon" href="assets/Nesso.png" type="image/png"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div class="grain"></div>
+<header class="topbar">
+  <div class="shell nav">
+    <a class="brand" href="#top"><span class="logo-crop"><img src="assets/Nesso.png" alt="Nesso logo"/></span><b>NESSO<span>.</span></b></a>
+    <nav><a class="active" href="#top">Lobby</a><a href="#archive">Archive</a><a href="#protocol">Method</a><a href="#activity">Ledger</a><a href="#maintainers">Maintainers</a></nav>
+    <div class="nav-actions"><a class="network-link" href="https://robinhoodchain.blockscout.com" target="_blank" rel="noreferrer">Robinhood Chain ↗</a><a class="x-link" href="https://x.com/nessocollect" target="_blank" rel="noreferrer" aria-label="Nesso on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2H21l-6.02 6.88L22.06 22h-5.55l-4.35-5.69L7.18 22H4.42l6.45-7.37L4.08 2h5.69l3.93 5.2L18.24 2Zm-.97 17.69h1.53L8.94 4.19H7.3l9.97 15.5Z"/></svg></a><div class="wallet-shell"><button class="wallet-button" id="walletButton" aria-expanded="false"><span class="wallet-status-dot"></span><span class="wallet-icon">◇</span><span id="walletLabel">Connect wallet</span></button><div class="wallet-menu" id="walletMenu" hidden><div class="wallet-menu-head"><span>CONNECTED WALLET</span><b id="walletMenuAddress">—</b></div><div class="wallet-network"><i></i><div><span>NETWORK</span><b id="walletNetworkLabel">Robinhood Chain</b></div><button id="switchNetworkButton" hidden>SWITCH</button></div><div class="wallet-menu-actions"><a id="walletExplorerLink" target="_blank" rel="noreferrer">View explorer ↗</a><button id="disconnectWallet">Disconnect</button></div></div></div></div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero shell">
+  <div class="crumbs"><span>NESSO</span><i>/</i><span>OPEN SOURCE</span><i>/</i><span>RESCUE NETWORK</span><b>Autonomous maintenance</b></div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><i></i> SOFTWARE WITH A WILL TO LIVE.</div>
+      <h1>Abandoned <br class="mobile-break"/>code.<br/><em>Still alive.</em></h1>
+      <p>Nesso gives orphaned software its own agent and treasury—so it can find users, commission repairs, and hire the people who keep it useful.</p>
+      <div class="hero-actions"><button class="button primary" data-open-modal>Wake a repository <span>↗</span></button><a class="button ghost" href="#rescues">See who survived <span>↓</span></a></div>
+      <div class="fineprint"><span><i></i> No token required</span><span>Non-custodial treasury</span><span>Auditable decisions</span></div>
+      <div class="ca-strip" id="contractArea"><div><span>CONTRACT ADDRESS / ROBINHOOD CHAIN</span><code id="contractAddress">TO BE ANNOUNCED</code></div><button id="copyCaButton" disabled>PENDING</button></div>
+    </div>
+
+    <div class="artifact-stage" aria-label="An abandoned software artifact undergoing autonomous repair">
+  <figure class="relic-frame">
+    <img src="assets/nesso-logo-hero-v2.png" alt="A fragmented software archive repaired by a blue seam"/>
+    <div class="image-vignette"></div><div class="scan-beam"></div>
+    <figcaption><span>NESSO CONSERVATION LAB / CONCEPT FEED</span><span>ARTIFACT 00184</span></figcaption>
+  </figure>
+  <div class="artifact-index"><span>PROJECT / 00184</span><b>OPENFRAME.CORE</b><small>MIT · 2,418 DEPENDENTS</small></div>
+  <div class="artifact-state"><i></i><span>RECOVERY ACTIVE</span><b>72%</b></div>
+  <div class="artifact-dossier">
+    <div class="dossier-logo"><span class="logo-crop"><img src="assets/Nesso.png" alt=""/></span></div>
+    <div><small>AGENT FINDING</small><p>“The code is abandoned.<br/>The need is not.”</p></div>
+    <dl><div><dt>RUNWAY</dt><dd>184 DAYS</dd></div><div><dt>OPEN BOUNTY</dt><dd>0.12 ETH</dd></div><div><dt>NEXT REVIEW</dt><dd>18H 42M</dd></div></dl>
+    <button data-project="OpenFrame">OPEN CASE ↗</button>
+  </div>
+</div>
+</section>
+<section class="first-rescue shell" id="rescues">
+  <div class="rescue-ticket">
+    <div class="ticket-icon">⌘</div>
+    <div><small>YOUR FIRST RESCUE</small><h2>A repository is waiting to wake up.</h2><p>Paste a public GitHub URL. Nesso maps its users, maintenance debt, and path back to health.</p></div>
+    <div class="ticket-meta"><span>Assessment cost</span><b>FREE</b><span>Chain</span><b>ROBINHOOD</b></div>
+    <button class="button primary compact" data-open-modal>Start a rescue <span>↗</span></button>
+  </div>
+
+  <div class="section-head"><div><small>MODELED CASES / 03</small><h2>The rescue floor.</h2></div><div class="filters"><button class="active" data-filter="all">All</button><button data-filter="critical">Critical</button><button data-filter="recovering">Recovering</button></div></div>
+
+  <div class="project-table">
+    <div class="table-head"><span>Repository</span><span>Health</span><span>Active users</span><span>Current need</span><span>Rescue pool</span><span></span></div>
+    <article class="project-row" data-status="critical"><div class="project"><span class="project-avatar purple">PX</span><div><h3>PixelCache</h3><p>Last release 19 months ago</p></div></div><div class="score critical"><b>21</b><span>/100</span></div><strong>18.2K</strong><p>Security maintainer</p><strong>1.84 ETH</strong><button data-project="PixelCache">↗</button></article>
+    <article class="project-row" data-status="recovering"><div class="project"><span class="project-avatar cyan">FL</span><div><h3>Formless</h3><p>Agent awake 4 days</p></div></div><div class="score"><b>64</b><span>/100</span></div><strong>9.7K</strong><p>TypeScript contributor</p><strong>0.92 ETH</strong><button data-project="Formless">↗</button></article>
+    <article class="project-row" data-status="recovering"><div class="project"><span class="project-avatar orange">DB</span><div><h3>DustDB</h3><p>Agent awake 11 days</p></div></div><div class="score"><b>48</b><span>/100</span></div><strong>31.4K</strong><p>Release engineer</p><strong>3.16 ETH</strong><button data-project="DustDB">↗</button></article>
+  </div>
+</section>
+<section class="live-lab shell" id="liveLab">
+  <div class="live-lab-head"><div><small>LIVE RESCUE WORKSPACE</small><h2>Real repositories.<br/>Evidence first.</h2></div><div class="service-state"><i></i><span id="serviceLabel">Checking rescue agent…</span></div></div>
+  <div class="live-lab-grid">
+    <aside><span>HOW IT WORKS</span><ol><li><b>01</b><p>Nesso reads public GitHub metadata, commits, contributors, issues and releases.</p></li><li><b>02</b><p>The rescue agent scores silence, backlog and maintainer concentration.</p></li><li><b>03</b><p>You may publish the report fingerprint to Robinhood Chain from your wallet.</p></li></ol><button class="button primary" data-open-modal>Assess a repository <span>↗</span></button></aside>
+    <div class="live-rescues"><div class="live-rescues-head"><span>SAVED ASSESSMENTS</span><span>LOCAL NESSO NODE</span></div><div id="liveRescueList" class="live-rescue-list"><p class="empty-state">No repository has been assessed on this node yet.</p></div></div>
+  </div>
+</section>
+
+<div class="status-tape" aria-hidden="true"><div><span>CASE 00184 / PATCH VERIFIED</span><i>◆</i><span>CASE 00201 / FUNDING THRESHOLD REACHED</span><i>◆</i><span>CASE 00177 / MAINTAINER MATCHED</span><i>◆</i><span>CASE 00216 / HEALTH SCAN RUNNING</span><i>◆</i><span>ROBINHOOD CHAIN / BLOCK 18,442,091</span><i>◆</i><span>CASE 00184 / PATCH VERIFIED</span><i>◆</i></div></div>
+<section class="archive" id="archive"><div class="shell">
+  <div class="archive-head"><div><small>THE ENDANGERED SOFTWARE INDEX</small><h2>What disappears<br/>when nobody looks?</h2></div><div class="index-note"><span>MODELED TESTNET SNAPSHOT / 2026—09—17</span><p>Nesso searches for software that has lost maintainers but not relevance. Dependency activity, release silence, security exposure and contributor concentration determine its rescue priority.</p></div></div>
+  <div class="index-board">
+    <aside class="index-summary">
+      <span class="vertical-label">NESSO / INDEX 0001</span>
+      <div class="index-total"><small>DEPENDENT INSTALLS AT RISK</small><b>1,804,218</b><p>Across the current illustrative archive</p></div>
+      <div class="risk-legend"><div><span>CRITICAL</span><b>18</b><i style="--w:84%"></i></div><div><span>STRANDED</span><b>31</b><i style="--w:67%"></i></div><div><span>SILENT</span><b>46</b><i style="--w:51%"></i></div><div><span>RECOVERING</span><b>12</b><i style="--w:29%"></i></div></div>
+      <div class="index-method"><span>PRIORITY SIGNAL</span><code>(usage × exposure) ÷ maintainer_capacity</code></div>
+    </aside>
+    <div class="specimen-grid">
+      <article class="specimen featured"><div class="specimen-top"><span>SPECIMEN / 0x184</span><em>CRITICAL</em></div><div class="code-field"><span>import</span> { decode } <span>from</span> "pixel-cache";<br/><i>// 18,204 weekly dependents</i><br/>await decode(input);<div class="fault-line"></div></div><div class="specimen-body"><div><small>LAST HEARTBEAT</small><b>19 MONTHS AGO</b></div><div><small>MAINTENANCE DEBT</small><b>143 ISSUES</b></div><div><small>ACTIVE STEWARDS</small><b>0</b></div></div><footer><div><h3>PixelCache</h3><p>Image processing primitive</p></div><button data-project="PixelCache">OPEN DOSSIER ↗</button></footer></article>
+      <article class="specimen"><div class="specimen-top"><span>0x201 / JS</span><em>STRANDED</em></div><h3>Formless</h3><p>Schema-driven form engine still used in 9,700 weekly builds.</p><dl><div><dt>SILENCE</dt><dd>11 MO</dd></div><div><dt>DEPENDENTS</dt><dd>9.7K</dd></div></dl><div class="specimen-seam"></div></article>
+      <article class="specimen"><div class="specimen-top"><span>0x177 / DB</span><em>RECOVERING</em></div><h3>DustDB</h3><p>Local-first storage engine with an incomplete migration path.</p><dl><div><dt>SILENCE</dt><dd>7 MO</dd></div><div><dt>DEPENDENTS</dt><dd>31.4K</dd></div></dl><div class="specimen-seam active"></div></article>
+      <article class="specimen"><div class="specimen-top"><span>0x216 / GO</span><em>SILENT</em></div><h3>RelayFox</h3><p>Webhook relay with a concentrated single-maintainer history.</p><dl><div><dt>SILENCE</dt><dd>16 MO</dd></div><div><dt>DEPENDENTS</dt><dd>6.2K</dd></div></dl><div class="specimen-seam"></div></article>
+      <article class="specimen"><div class="specimen-top"><span>0x229 / RS</span><em>CRITICAL</em></div><h3>ColdPath</h3><p>Filesystem watcher blocked by an unresolved memory fault.</p><dl><div><dt>SILENCE</dt><dd>22 MO</dd></div><div><dt>DEPENDENTS</dt><dd>12.8K</dd></div></dl><div class="specimen-seam"></div></article>
+    </div>
+  </div>
+  <div class="archive-foot"><span>Showing 5 of 107 indexed artifacts</span><button>Enter the full archive <b>↗</b></button><span>INDEX REFRESH / 04H 12M</span></div>
+</div></section>
+<section class="protocol" id="protocol"><div class="shell protocol-grid">
+  <div class="protocol-intro"><small>THE AUTONOMOUS LOOP</small><h2>The code becomes<br/>its own client.</h2><p>Nesso does not replace maintainers. It gives neglected software the budget, evidence, and agency required to find them.</p></div>
+  <div class="protocol-steps">
+  <article><b>01</b><span>WAKE</span><div><h3>Read the project's pulse.</h3><p>Nesso maps dependents, unresolved issues, contributor history, release velocity and maintenance risk into a public health profile.</p></div></article>
+  <article><b>02</b><span>FUND</span><div><h3>Give it a treasury.</h3><p>Sponsorships, paid services and protocol revenue become a transparent budget governed by explicit maintenance policies.</p></div></article>
+  <article><b>03</b><span>REPAIR</span><div><h3>Let the project hire.</h3><p>The agent scopes work, prices bounties, recruits qualified maintainers, verifies patches and releases payment after review.</p></div></article>
+</div>
+</div></section>
+
+<section class="case-study"><div class="shell">
+  <div class="section-label"><span>RESCUE REPORT / 001</span><span>ILLUSTRATIVE TESTNET CASE</span></div>
+  <div class="case-grid">
+    <div class="case-copy"><small>NINE DAYS TO RECOVERY</small><h2>From unmaintained<br/>to shipping again.</h2><p>OpenFrame had active dependents, no release in fourteen months, and a critical dependency warning. Its Nesso agent converted that evidence into a funded, reviewable repair.</p><div class="case-numbers"><div><b>2,418</b><span>DEPENDENTS PROTECTED</span></div><div><b>0.12 ETH</b><span>PAID TO MAINTAINERS</span></div><div><b>9 DAYS</b><span>TO VERIFIED RELEASE</span></div></div></div>
+    <div class="recovery-ledger"><div class="ledger-head"><span>RECOVERY LEDGER</span><b>OPENFRAME / 0x7C…A91</b><i>VERIFIED</i></div><ol><li><time>DAY 00</time><span class="event-dot"></span><div><b>Agent initialized</b><p>Dependency graph and active usage verified.</p></div><em>WAKE</em></li><li><time>DAY 02</time><span class="event-dot"></span><div><b>Repair proposal approved</b><p>CVE patch scoped at 0.12 ETH with two required reviews.</p></div><em>FUND</em></li><li><time>DAY 06</time><span class="event-dot"></span><div><b>Maintainer submitted patch</b><p>47 tests passed. No breaking API changes detected.</p></div><em>BUILD</em></li><li><time>DAY 09</time><span class="event-dot done"></span><div><b>Release v4.2.1 published</b><p>Bounty settled after reproducible build verification.</p></div><em>SHIP</em></li></ol><div class="commit-proof"><span>VERIFIED ARTIFACT</span><code>sha256: 8fa3…19c2</code><a href="#activity">View decision trail ↗</a></div></div>
+  </div>
+</div></section>
+
+<section class="economics" id="economics"><div class="shell">
+  <div class="economics-head"><div><small>PROJECT ECONOMICS</small><h2>A maintenance economy.<br/>Not a donation button.</h2></div><p>Every project has a policy-controlled treasury. Capital enters for a reason, leaves against verified work, and remains visible throughout its lifecycle.</p></div>
+  <div class="money-flow"><article><span class="flow-num">01 / IN</span><h3>Earn</h3><p>Sponsorships, hosted services, commercial licenses and ecosystem grants.</p><ul><li>Sponsor deposits</li><li>Usage revenue</li><li>Protocol grants</li></ul></article><div class="flow-arrow">→</div><article class="treasury-card"><span class="flow-num">02 / HOLD</span><h3>Govern</h3><p>Spending caps, runway targets and approval thresholds are encoded before funds move.</p><div class="treasury-balance"><span>AVAILABLE TREASURY</span><b>4.82 ETH</b><i>184-day runway</i></div></article><div class="flow-arrow">→</div><article><span class="flow-num">03 / OUT</span><h3>Repair</h3><p>Maintainers, auditors and infrastructure providers are paid against evidence.</p><ul><li>Code bounties</li><li>Security reviews</li><li>Hosting & CI</li></ul></article></div>
+  <div class="policy-strip"><span>POLICY 01 · MAX 15% PER BOUNTY</span><span>POLICY 02 · TWO REVIEWERS</span><span>POLICY 03 · 90-DAY MINIMUM RUNWAY</span><span>POLICY 04 · PUBLIC RECEIPTS</span></div>
+</div></section>
+
+<section class="activity shell" id="activity">
+  <div class="activity-head"><div><small>AGENT DECISION LOG</small><h2>Every action leaves a trail.</h2></div><p>No invisible automation. Each recommendation includes the evidence used, the policy applied, and the final signer.</p></div>
+  <div class="activity-panel"><div class="activity-tabs"><button class="active">All activity</button><button>Funding</button><button>Maintenance</button><button>Governance</button><span><i></i> ILLUSTRATIVE CHAIN ACTIVITY</span></div><div class="activity-table"><div class="activity-table-head"><span>Time</span><span>Project / action</span><span>Agent reasoning</span><span>Value</span><span>Status</span></div><article data-activity="maintenance"><time>12:48:09</time><div><b>OpenFrame</b><p>Bounty settlement</p></div><p>Patch passed CI, reproducible build and 2/2 reviewer threshold.</p><strong>−0.12 ETH</strong><em class="verified">VERIFIED</em></article><article data-activity="governance"><time>11:16:42</time><div><b>DustDB</b><p>Runway protection</p></div><p>Infrastructure quote exceeded policy cap. Proposal returned for revision.</p><strong>0.00 ETH</strong><em class="blocked">BLOCKED</em></article><article data-activity="maintenance"><time>09:04:21</time><div><b>Formless</b><p>Maintainer shortlist</p></div><p>Three contributors matched TypeScript and release-history requirements.</p><strong>0.40 ETH</strong><em>PROPOSED</em></article><article data-activity="funding"><time>YESTERDAY</time><div><b>PixelCache</b><p>Treasury deposit</p></div><p>Community rescue pool reached the minimum activation threshold.</p><strong class="positive">+1.84 ETH</strong><em class="verified">SETTLED</em></article></div></div>
+</section>
+
+<section class="maintainers" id="maintainers"><div class="shell">
+  <div class="maintainer-head"><div><small>FOR MAINTAINERS</small><h2>The commons has work<br/>worth paying for.</h2></div><div><p>Take scoped work with clear acceptance criteria, visible funding, and automatic settlement after verification.</p><button class="button dark-button">Create maintainer profile <span>↗</span></button></div></div>
+  <div class="bounty-grid"><article><div class="bounty-top"><span class="project-avatar purple">PX</span><em>SECURITY</em></div><h3>Patch image decoder memory leak</h3><p>Reproduce, patch and add regression coverage for malformed progressive JPEG input.</p><div class="skills"><span>Rust</span><span>Fuzzing</span><span>2 reviews</span></div><footer><div><small>REWARD</small><b>0.42 ETH</b></div><div><small>CLOSES</small><b>3 DAYS</b></div><button>View bounty ↗</button></footer></article><article><div class="bounty-top"><span class="project-avatar cyan">FL</span><em>RELEASE</em></div><h3>Restore TypeScript 6 compatibility</h3><p>Remove deprecated compiler APIs and verify generated declarations across supported targets.</p><div class="skills"><span>TypeScript</span><span>Compiler API</span><span>CI</span></div><footer><div><small>REWARD</small><b>0.28 ETH</b></div><div><small>CLOSES</small><b>5 DAYS</b></div><button>View bounty ↗</button></footer></article><article><div class="bounty-top"><span class="project-avatar orange">DB</span><em>DATABASE</em></div><h3>Verify crash-safe migration path</h3><p>Build a property-based test suite for interrupted v2-to-v3 local storage migrations.</p><div class="skills"><span>SQLite</span><span>Testing</span><span>Storage</span></div><footer><div><small>REWARD</small><b>0.36 ETH</b></div><div><small>CLOSES</small><b>8 DAYS</b></div><button>View bounty ↗</button></footer></article></div>
+</div></section>
+
+<section class="trust shell"><div class="trust-head"><small>BUILT FOR VERIFIABILITY</small><h2>Autonomy needs guardrails.</h2></div><div class="trust-grid"><article><b>01</b><h3>Policy-bound wallets</h3><p>Agents can only spend within project-defined assets, contracts, limits and approval thresholds.</p></article><article><b>02</b><h3>Reproducible acceptance</h3><p>Tests, build artifacts and reviewer signatures are attached before a bounty can settle.</p></article><article><b>03</b><h3>Human override</h3><p>Authorized stewards can pause execution, dispute results and rotate policies without seizing funds.</p></article><article><b>04</b><h3>Public accounting</h3><p>Funding sources, commitments, payouts and remaining runway stay inspectable onchain.</p></article></div></section>
+
+<section class="faq"><div class="shell faq-grid"><div><small>QUESTIONS / ANSWERS</small><h2>Before software<br/>wakes up.</h2><p>Nesso now performs live public-repository assessments and can publish each report fingerprint to Robinhood Chain. Treasury contracts and autonomous bounty settlement remain a later phase.</p></div><div class="faq-list"><details open><summary>Who owns an awakened repository?<span>+</span></summary><p>Nesso does not claim the code or its trademark. Existing licenses remain in force. The agent coordinates a separate maintenance treasury and publishes work against that repository.</p></details><details><summary>Can an agent merge code by itself?<span>+</span></summary><p>Only when the repository explicitly grants that permission. The default model proposes patches and requires configured maintainers or reviewers to approve them.</p></details><details><summary>Where does project revenue come from?<span>+</span></summary><p>Each project chooses its own mix: sponsorships, hosted versions, support agreements, commercial licensing or ecosystem grants.</p></details><details><summary>Why build on Robinhood Chain?<span>+</span></summary><p>Robinhood Chain is EVM-compatible and designed for financial applications, making it suitable for transparent project treasuries and programmable payouts.</p></details></div></div></section>
+<section class="manifesto shell" id="about"><div class="manifesto-logo"><img src="assets/Nesso.png" alt="Nesso"/></div><small>THE NESSO MANIFESTO</small><h2>Open source built the internet.<br/><em>It should be able to outlive us.</em></h2><button class="button primary" data-open-modal>Give code a second life <span>↗</span></button></section>
+</main>
+
+<footer><div class="shell footer"><a class="brand" href="#top"><span class="logo-crop"><img src="assets/Nesso.png" alt=""/></span><b>NESSO<span>.</span></b></a><p>Autonomous software rescue on Robinhood Chain.</p><div><a href="https://docs.robinhood.com/chain/" target="_blank" rel="noreferrer">Network docs ↗</a><span>© 2026</span></div></div></footer>
+
+<div class="modal" id="rescueModal" aria-hidden="true"><button class="backdrop" data-close-modal aria-label="Close"></button><div class="modal-card rescue-modal"><button class="modal-close" data-close-modal>×</button>
+  <div id="rescueForm"><small>INITIATE RESCUE / 01</small><h2>Wake a repository.</h2><p>Nesso reads live public evidence from GitHub and creates a persistent rescue dossier.</p><label for="repoInput">PUBLIC GITHUB URL</label><div class="url-field"><span>⌘</span><input id="repoInput" type="url" placeholder="https://github.com/org/repository"/></div><div class="modal-meta"><span>Assessment: free</span><span>GitHub public data</span></div><button class="button primary full" id="scanButton">Run live assessment <span>↗</span></button></div>
+  <div id="scanProgress" class="scan-progress" hidden><div class="scan-orbit"><i></i></div><small>RESCUE AGENT ACTIVE</small><h2>Reading the repository.</h2><p id="scanProgressText">Collecting commits, issues, releases and contributor history…</p></div>
+  <div id="rescueResult" class="rescue-result" hidden><div class="result-kicker"><small>ASSESSMENT COMPLETE</small><em id="resultStatus">STABLE</em></div><div class="result-title"><div><h2 id="resultRepo">owner/repository</h2><a id="resultRepoLink" target="_blank" rel="noreferrer">Open on GitHub ↗</a></div><div class="health-dial"><b id="resultHealth">--</b><span>/100 HEALTH</span></div></div><div id="resultSignals" class="result-signals"></div><div class="result-plan"><span>AGENT RECOMMENDATION</span><div id="resultPlan"></div></div><div class="proof-box"><div><span>RESCUE FINGERPRINT</span><code id="resultFingerprint">sha256: —</code></div><button id="publishProofButton">Publish onchain ↗</button></div><p class="proof-note">Publishing is optional. Your wallet sends a 0 ETH proof transaction; only network gas is charged.</p><button class="result-again" id="newAssessmentButton">Assess another repository</button></div>
+</div></div>
+<div class="toast" id="toast"></div><script src="app.js"></script>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
