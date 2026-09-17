@@ -6,7 +6,7 @@ const form=$("#rescueForm"),progress=$("#scanProgress"),result=$("#rescueResult"
 let timer,currentRescue=null,currentAccount=null;
 function notify(message,type="info"){toast.textContent=message;toast.dataset.type=type;toast.classList.add("show");clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove("show"),4200)}
 const short=value=>value.slice(0,6)+"…"+value.slice(-4),escapeHtml=value=>String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
-const STATIC_MODE=location.hostname.endsWith(".github.io");
+const STATIC_MODE=location.hostname.endsWith(".github.io")||location.hostname==="nesso.fun"||location.hostname==="www.nesso.fun";
 async function githubBrowser(path){
  const response=await fetch("https://api.github.com"+path,{headers:{Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"}});
  if(response.status===404)throw Error("Repository was not found or is not public");
@@ -137,6 +137,7 @@ const revealItems=$$(".archive-head,.index-board,.case-grid,.economics-head,.mon
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("revealed");observer.unobserve(entry.target)}}),{threshold:.1});revealItems.forEach(item=>observer.observe(item));
 const artifact=$(".artifact-stage");artifact?.addEventListener("pointermove",event=>{const box=artifact.getBoundingClientRect(),x=(event.clientX-box.left)/box.width-.5,y=(event.clientY-box.top)/box.height-.5;artifact.style.setProperty("--mx",`${x*5}px`);artifact.style.setProperty("--my",`${y*4}px`)});artifact?.addEventListener("pointerleave",()=>{artifact.style.setProperty("--mx","0px");artifact.style.setProperty("--my","0px")});
 loadRescues();
+
 
 
 

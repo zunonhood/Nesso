@@ -35,3 +35,6 @@ Set APP.contractAddress at the top of app.js when the Robinhood Chain contract i
 ## GitHub Pages
 
 The public build uses live GitHub public API data and browser localStorage, so repository assessment works without the Node server. Wallet connection and Robinhood Chain proof transactions remain client-side.
+
+Custom domain: https://nesso.fun
+
